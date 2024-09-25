@@ -2,16 +2,31 @@
 <html>
     <head>
         <title>PU</title>
+        <button onclick='alert("Welcome to Purple Univers!")'>Click Me!</button>
+        <p id="fine">I'm Fine.</p>
+        <img id="imgc" scr="img_Smeraldo Flower.jpg">
+        <button onclick="clicked()">Magic!</button>
+        <button onclick="image()">Beautiful view</button>
+        <div id="fine" onclick="clicked(this)"> Press the button.</div>
+        <button id="cheers">Try New World</button>
+        <div id="tay"></div>
+         <script> 
+         function clicked(){document.getElementById('fine').innerHTML="Save Me.";}
+         function image(){document.getElementById('imgc').scr="0 o'clock.jpg";}
+         function onclicked(this){this.innerHTML="Press the button.";}
+         const element = document.getElementById('cheers');
+         element.addEventListener("click", function(){ cheerup(element)});
+         function cheerup(elem){elem.innerHTML="hello world";}
+        </script>  
     </head>
     <body>
         <h1>Purple Univers</h1>
         <div>
             <h2>The Smeraldo Flower</h2>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM4DS1BcecBTgPvxMWyd7qTNTH6ihcBYeFRQ&s"/>
+            <img src="img_Smeraldo Flower.jpg"/>
             <p>"Smeraldo" means Emerald in Italian. This flower appeared in the city of Smeraldo in 15-16th  century in the northen Italy. </p>
         </div>
         </body>
-
         <body>
     <div>
         <h3>Inspired songs</h3>
@@ -22,6 +37,11 @@
             <a href="https://www.youtube.com/watch?v=LIER2z3DBe8" target="_blank">Semeraldo Garden Marching Band</a>
          </div>
         </body>
+        <div> 
+            <h4>About You</h4>   
+            <p>This form will help with the introperpective of your current state. Whenever you are ready, please click on the link below. Take a moment to appreciate your inner-self.</p>
+            <a href="file:///C:/Users/daksh/Documents/GitHub/webserverflower/form2.html" target="_blank">Vform</a>
+        </div>
     
     </body>
 </html>
