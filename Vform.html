@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>VForm</title>
+    </head>
+    <body> 
+        <h1>About you</h1>
+        <form>
+            <form action="toram.php" method="GET">
+             <!-- question 1 --> 
+            <label for="q1">What is your name? </label><br>
+            <input type="text" required/><br>  
+            <div>
+                <img src="img/sun&moon.gif"/>
+            </div>
+            <!-- question 2 --> 
+                <label for="q2">How was your day?</label><br> 
+                <input type="radio" id="feeling"  name="feeling" value="Great"><br> 
+                <label for="great">It was great!</label><br> 
+                <input type="radio" id="feeling"  name="feeling"  value="Okay"><br> 
+                <label for="okay">It was okay :|</label><br> 
+                <input type="radio" id="feeling"  name="feeling"  value="Terrible"><br> 
+                <label for="terrible">It was terrible...</label><br> 
+                <input type="radio" id="feeling"  name="feeling"  value="Nothing"><br> 
+                <label for="nothing">Not a single word from the options above resonate with my feelings. </label><br> 
+            <div>
+                <img src="img/emoIO.jpg"/>
+                 </div>
+                 <!-- question 3 --> 
+                 <label for="q3">How are you feeling right now?</label><br> 
+                 <select id="emotion" name="emotion">
+                    <option value="sad">Sad</option>
+                    <option value="lonely">Lonely</option>
+                    <option value="frustrated">Frustrated</option>
+                    <option value="tired">Tired</option>
+                    <option value="bored">Bored</option>
+                    <option value="mad">Mad</option>
+                    <option value="jalous">Jalous</option>
+                    <option value="happy">Happy</option>
+                    <option value="relax">Relax</option>
+                    <option value="anxious">Anxious</option>
+                    <option value="nervous">Nervous</option>
+                    <option value="disgusted">Disgusted</option>
+                    <option value="lost">Lost</option>
+                 </select>
+                 <!-- question 4 --> 
+                 <div> 
+                    <fieldset> 
+                        <legend> Weather: </legend>
+                        <label for="q4">What is your favorite weather?</label><br> 
+                <input type="checkbox" id="w1"  name="w1" value="sun"><br> 
+                <label for="sun">Sunny</label><br> 
+                <input type="checkbox" id="w1"  name="w1"  value="rain"><br> 
+                <label for="rain">Rainy</label><br> 
+                <input type="checkbox" id="w1"  name="w1"  value="snow"><br> 
+                <label for="snow">Snowy</label><br> 
+                <input type="checkbox" id="w1"  name="w1"  value="wind"><br> 
+                <label for="wind">Windy</label><br> 
+                <input type="checkbox" id="w1"  name="w1"  value="cloud"><br> 
+                <label for="cloud">Cloudy</label><br> 
+                <input type="checkbox" id="w1"  name="w1"  value="gnm"><br> 
+                <label for="gnm">Gloomy and Misty</label><br> 
+                    </fieldset>
+                     </div>
+                      <!-- question 5 --> 
+                     <div>
+                        <img src="img/moon_cycle.gif"/>
+                     </div>
+                     <label for="q5">What is your favorite moment during the day?</label><br> 
+                     <input list="24h" name="24h"> 
+                     <datalist id="24h"> 
+                      <option value="morning"></option>
+                      <option value="dawn"></option>
+                      <option value="noon"></option>
+                      <option value="afternoon"></option>
+                      <option value="dusk"></option>
+                      <option value="evening"></option>
+                      <option value="night"></option>
+                      <option value="midnight"></option>
+                     </datalist>
+                     <div><!-- question 6 --> 
+                        <label for="q6">How do you feel after answering the questions above?</label><br>
+                       <input type="text" id="emotions" name="emotions" pattern="[A-Za-z]{50}" title="maximun 50 words"><br><br> </div>
+                       <label for="c1">Feedbacks:</label><br>
+                        <input type="text" placeholder="optional." >
+                     <div><input type="button" onclick="alert('Congratulation! You have now finish the form. Do not forget to click submit.')" value="Finish!">  </div>
+             
+            <input type="submit" value="Submit"><br>
+        </form>
+    </body>
+</html>
