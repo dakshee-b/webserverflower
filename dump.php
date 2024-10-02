@@ -3,10 +3,10 @@
     <head>
 </head>
     <body>
-        <p>
-            <?=
-             var_dump ($_SERVER) 
-             ?>
-        </p>
+        <p> What is my User-Agent?
+          <=? 
+          <form action="dump.php" method="POST"> 
+            $agent=$_GET['HTTP_User_Agent']; ?>
+    </p>
 </body>
     </html>
