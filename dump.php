@@ -5,7 +5,7 @@
     <body>
         <p> What is my User-Agent?
           <=? 
-         $_GET['HTTP_User_Agent']; 
+         echo $_SERVER['HTTP_User_Agent']; 
          ?>
     </p>
 </body>
