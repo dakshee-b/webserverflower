@@ -9,19 +9,20 @@
             <form action="toram.php" method="POST">
              <!-- question 1 --> 
             <label for="q1">What is your name? </label><br>
-            <input type="text" required/><br>  
+            <input type="text" id="q1" name="q1"/><br>  
             <div>
                 <img src="img/sun&moon.gif"/>
             </div>
             <!-- question 2 --> 
                 <label for="q2">How was your day?</label><br> 
-                <input type="radio" id="great"  name="great" value="Great"><br> 
+                <input type="text" id="q2" name="q2"/><br>  
+                <input type="radio" id="great"  name="days" value="Great"><br> 
                 <label for="great">It was great!</label><br> 
-                <input type="radio" id="okay"  name="okay"  value="Okay"><br> 
+                <input type="radio" id="okay"  name="days"  value="Okay"><br> 
                 <label for="okay">It was okay :|</label><br> 
-                <input type="radio" id="terrible"  name="terrible"  value="Terrible"><br> 
+                <input type="radio" id="terrible"  name="days"  value="Terrible"><br> 
                 <label for="terrible">It was terrible...</label><br> 
-                <input type="radio" id="nothing"  name="nothing"  value="Nothing"><br> 
+                <input type="radio" id="nothing"  name="days"  value="Nothing"><br> 
                 <label for="nothing">Not a single word from the options above resonate with my feelings. </label><br> 
             <div>
                 <img src="img/emoIO.jpg"/>
@@ -47,7 +48,8 @@
                  <div> 
                     <fieldset> 
                         <legend> Weather: </legend>
-                        <label for="q4">What is your favorite weather?</label><br> 
+                        <label for="weather">What is your favorite weather?</label><br> 
+                        <select id="weather" name="weather">
                 <input type="checkbox" id="sun"  name="sun" value="sun"><br> 
                 <label for="sun">Sunny</label><br> 
                 <input type="checkbox" id="rain"  name="rain"  value="rain"><br> 
@@ -66,8 +68,8 @@
                      <div>
                         <img src="img/moon_cycle.gif"/>
                      </div>
-                     <label for="q5">What is your favorite moment during the day?</label><br> 
-                     <input list="24h" name="24h"> 
+                     <label for="24h">What is your favorite moment during the day?</label><br> 
+                     <input list="24h" id="24h" name="24h"> 
                      <datalist id="24h"> 
                       <option value="morning"></option>
                       <option value="dawn"></option>
@@ -80,9 +82,9 @@
                      </datalist>
                      <div><!-- question 6 --> 
                         <label for="emotions">How do you feel after answering the questions above?</label><br>
-                       <input type="text" id="emotions" name="emotions" pattern="[A-Za-z]{5}" title="minimun 5 words"><br><br> </div>
+                       <input type="text" id="emotions" name="emotions" pattern="[A-Za-z]{1-10}" title="maximun 10 words"><br><br> </div>
                        <label for="c1">Feedbacks:</label><br>
-                        <input type="text" placeholder="optional." >
+                        <input type="text" placeholder="optional." id="c1" name="c1" >
                      <div><input type="button" onclick="alert('Congratulation! You have now finish the form. Do not forget to click submit.')" value="Finish!">  </div>
              
             <input type="submit" value="Submit"><br>
