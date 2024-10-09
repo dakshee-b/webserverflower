@@ -11,7 +11,7 @@
         </p>
         <p>
         How was your day? <?=
-            htmlspecialchars ($_POST ['q2']) 
+            htmlspecialchars ($_POST ['days']) 
              ?>
        </p>
        <p>
