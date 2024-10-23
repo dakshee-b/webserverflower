@@ -1,4 +1,4 @@
-<! Doctype html> 
+<!-- <! Doctype html> 
 <html>
     <head>
       <title> Form response </title>  
@@ -13,10 +13,7 @@
           if (!conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $sql = "CREATE TABLE visitors(
-          id int auto_increment primary key,
-          group_name varchar(255),
-          group_number varchar (255));";
+          $sql = "select * from visitors;";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
@@ -36,4 +33,4 @@
                     <input type="submit" value="submit"/>
          </form>            
     </body>
-</html>
+</html> -->
