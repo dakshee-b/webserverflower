@@ -11,7 +11,7 @@
           $conn = mysqli_connect ($server, $username, $password, $database);
           
           // Check for successful connection
-          if (!conn) {
+          if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
           $sql = "select * from visitors;";
@@ -25,9 +25,9 @@
           /*foreach($result as $row){
             echo "{$row['group_name']}' is the number {$row['group_name']}.<br>";
          }*/
-         if($resultcheck > 0 ) {
+         if($resultcheck > 0) {
           while($row = mysqli_fetch_assoc($result)){
-            echo $row['group_number']. <br>;
+             echo "{$row['group_name']}' is the number {$row['group_number']}.<br>";
           }
         }
          //close session (stop connection)
