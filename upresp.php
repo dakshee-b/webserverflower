@@ -19,9 +19,8 @@
     </head>
     <body>
                 <?php
-                     foreach($result as $row){
-                        echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>";
-                     }
+                    foreach($result as $row){
+                        echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>"; }
                      //close session (stop connection)
                      mysqli_close($conn);
                      ?>
