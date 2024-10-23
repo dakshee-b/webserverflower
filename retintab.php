@@ -3,7 +3,7 @@
     <head>
       <title> Search info from table </title>  
       <?php 
-          $visitor_number = htmlspecialchars ($_POST ["group"]) 
+          $visitor_number = htmlspecialchars ($_POST ["group"]);
           $server = "localhost"; 
           $username = "ocl";
           $password = "0610jun96";
@@ -14,12 +14,12 @@
           if (!conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $sql = "select * visitor_name, visitor_number from visitors_list where visitor_number='$visistor_name';";
+          $sql = "select * group_name, group_number from visitors where group_number='{$group_name}';";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
     <body>
-          You selected group: <?= $visistor_name ?>. </br>   
+          You selected group:<?= $group_name ?>. </br>   
           <?php 
           foreach($result as $row){
             echo"{$row['group_name']}' is the number {$row['group_name']}.";
