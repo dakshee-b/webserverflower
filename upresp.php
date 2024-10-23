@@ -16,6 +16,7 @@
           $group= $_POST ['group'];  
           $sql = "insert into visitors (group_name) values ('$group')";
           $result = mysqli_query($conn, $sql);
+          echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
           ?>
     </head>
     <body>
