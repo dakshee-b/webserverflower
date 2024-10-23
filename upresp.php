@@ -1,4 +1,4 @@
-<!-- <! Doctype html> 
+ <! Doctype html> 
 <html>
     <head>
       <title> Form response </title>  
@@ -13,14 +13,11 @@
           if (!conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $sql = "select * from visitors;";
+          $sql = "insert into visitors (group_name) values ('$group_name')";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
     <body>
-        <form action="upresp.php" method="post">
-            <label for="check-in">Select a group:</label></br>
-            <select id="group" name="group">
                 <?php
                      foreach($result as $row){
                         echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>";
@@ -28,9 +25,8 @@
                      //close session (stop connection)
                      mysqli_close($conn);
                      ?>
-                     </select>
                     </br>
                     <input type="submit" value="submit"/>
          </form>            
     </body>
-</html> -->
+</html> 
