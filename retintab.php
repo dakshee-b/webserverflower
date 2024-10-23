@@ -14,11 +14,16 @@
           if (!conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $sql = "select * visitor_name, visitor_number from visitors_list where visitor_number='{$visistor_name}';";
+          $sql = "select * visitor_name, visitor_number from visitors_list where visitor_number='$visistor_name';";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
     <body>
           You selected group: <?= $visistor_name ?>. </br>   
+          <?php 
+          foreach($result as $row){
+            echo"{$row['group_name']}' is the number {$row['group_name']}.";
+         }
+          ?>
     </body>
 </html>
