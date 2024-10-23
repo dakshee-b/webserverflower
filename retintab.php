@@ -21,14 +21,14 @@
     <body>
           You selected group:<?= htmlspecialchars ($group_number); ?>. </br> 
           <?php 
-          /*foreach($result as $row){
-            echo"{$row['group_name']}' is the number {$row['group_name']}.<br>";
-         }*/
-         if(mysqli_num_rows($result) == 1 ) {
+          foreach($result as $row){
+            echo "{$row['group_name']}' is the number {$row['group_name']}.<br>";
+         }
+         /*if(mysqli_num_rows($result) == 1 ) {
           while($row = mysqli_fetch_assoc($result)){
             echo $row['group_number'] is the number $row['group_name']. <br>;
           }
-        }
+        }*/
          //close session (stop connection)
          mysqli_close($conn);
           ?>
