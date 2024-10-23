@@ -25,8 +25,6 @@
                      //close session (stop connection)
                      mysqli_close($conn);
                      ?>
-                    </br>
-                    <input type="submit" value="submit"/>
-         </form>            
+                    </br>           
     </body>
 </html> 
