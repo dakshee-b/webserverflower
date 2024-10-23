@@ -13,7 +13,8 @@
           if (!conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $sql = "insert into visitors (group_name) values ('$group_name')";
+          $group= $_POST ['group'];  
+          $sql = "insert into visitors (group_name) values ('$group')";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
