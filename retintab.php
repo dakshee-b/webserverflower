@@ -27,7 +27,7 @@
          }*/
          if($resultcheck > 0 ) {
           while($row = mysqli_fetch_assoc($result)){
-            echo $row['group_number'];
+            echo $row['group_number']. <br>;
           }
         }
          //close session (stop connection)
