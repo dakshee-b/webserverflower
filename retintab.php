@@ -3,7 +3,7 @@
     <head>
       <title> Search info from table </title>  
       <?php 
-          $group_number = htmlspecialchars ($_POST["find"]);
+          $group_name = htmlspecialchars ($_POST["find"]);
           $server = "localhost"; 
           $username = "ocl";
           $password = "0610jun96";
@@ -19,7 +19,7 @@
           ?>
     </head>
     <body>
-          You selected group:<?= htmlspecialchars ($group_number); ?>. </br> 
+          You selected group:<?= htmlspecialchars ($group_name); ?>. </br> 
           <?php 
           foreach($result as $row){
             echo "{$row["group_name"]} is the number {$row["group_number"]}.<br>";
