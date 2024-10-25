@@ -24,6 +24,7 @@
           ?>
     </head>
     <body>
+                You search for group:<?= htmlspecialchars ($gr); ?>. </br> 
                <?php
                     foreach($result as $row){
                         echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>"; } 
