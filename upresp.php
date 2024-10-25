@@ -14,8 +14,8 @@
             die("Connection failed: {mysqli_connect_error()}");
           }
           $gr= htmlspecialchars ($_POST ['gr']);  
-
-          $sql = "insert into visitors (group_name) values ('$gr')";
+          $num= htmlspecialchars ($_POST ['num'])
+          $sql = "insert into visitors (group_name, group_number) values ('$gr, $num')";
          
           $result = mysqli_query($conn, $sql);
          
