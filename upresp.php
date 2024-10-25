@@ -21,10 +21,10 @@
          
           //test if the data is true
           echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
+          echo mysqli_error($conn); 
           ?>
     </head>
     <body>
-                You search for group:<?= htmlspecialchars ($gr); ?>. </br> 
                <?php
                     foreach($result as $row){
                         echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>"; } 
