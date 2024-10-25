@@ -14,8 +14,8 @@
             die("Connection failed: {mysqli_connect_error()}");
           }
           $gr= htmlspecialchars ($_POST ['gr']);  
-          $num= htmlspecialchars ($_POST ['num'])
-          $sql = "insert into visitors (group_name, group_number) values ('$gr, $num')";
+          $num= htmlspecialchars ($_POST ['num']);
+          $sql = "insert into visitors (group_name, group_number) values ('$gr', '$num')";
          
           $result = mysqli_query($conn, $sql);
          
@@ -27,7 +27,7 @@
     <body>
                <?php
                     foreach($result as $row){
-                        echo"<option value='{$row['group_number']}'> {$row['group_name']}</option></br>"; } 
+                        echo"<option value='{$row['group_name']}'> {$row['group_number']}</option></br>"; } 
                      //close session (stop connection)
                      mysqli_close($conn);
                      ?>    
