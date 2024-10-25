@@ -17,8 +17,6 @@
           $gr=var_dump($_POST ['gr']);  
           $num=var_dump($_POST ['num']);
 
-          echo "Group Name: $gr, Group Number: $num </br>";
-
           $sql = "insert into visitors (group_name, group_number) values ('$gr', '$num')";
          
           $result = mysqli_query($conn, $sql);
