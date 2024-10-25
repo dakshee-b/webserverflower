@@ -17,8 +17,6 @@
           $gr=htmlspecialchars ($_POST ['gr']);  
           $num=htmlspecialchars ($_POST ['num']);
 
-          echo "Group Name: $gr, Group Number: $num </br>";
-
           $sql = "insert into visitors (group_name, group_number) values ('$gr', '$num')";
          
           $result = mysqli_query($conn, $sql);
