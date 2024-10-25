@@ -5,9 +5,10 @@
     </head>
     <body> 
         <h1>Questionnaire</h1>
-    <!--    <img src="img/bt21.jpg"/>
-        <img src="img/miniteen.jpg"/>
-        <img src="img/skzoo.jpg"/> -->
+        <img src="img/bt21.jpg" width="300" height="300"/>
+        <img src="img/skzoo.jpg" width="150" height="300"/> 
+        <img src="img/miniteen.jpg" width="330" height="300"/>
+ 
         <form action="upresp.php" method="post">
             <label for="gr">Select a group:</label></br>
             <select id="gr" name="gr" required>
@@ -15,14 +16,14 @@
                     <option value="miniteen">Miniteen</option>
                     <option value="Skzoo">Skzoo</option>
             </select>
-
-            <label for="num">Select a group:</label><br>
+             <div>
+                <label for="num">Select a group:</label><br>
             <select id="num" name="num" required>
                     <option value="7">7</option>
                     <option value="13">13</option>
                     <option value="8">8</option>
             </select>
-            
+             </div>           
                  <br/>
             <input type="submit" value="Submit"><br>
             <div> 
