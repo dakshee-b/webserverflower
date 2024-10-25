@@ -7,15 +7,19 @@
           $username = "ocl";
           $password = "0610jun96";
           $database = "Magic_Galaxy_Shop";
-          $conn = mysqli_connect ($server, $username, $password, $database);
+          $conn = mysqli_connect($server, $username, $password, $database);
           
           // Check for successful connection
-          if (!conn) {
+          if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $group= $_POST ['group'];  
+          $group= htmlspecialchars ($_POST ['group']);  
+
           $sql = "insert into visitors (group_name) values ('$group')";
+         
           $result = mysqli_query($conn, $sql);
+         
+          //test if the data is true
           echo $result ? "Success!" : "Failure: {mysqli_error($conn)}";
           ?>
     </head>
