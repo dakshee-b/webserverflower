@@ -14,7 +14,7 @@
           if (!$conn) {
             die("Connection failed: {mysqli_connect_error() }");
           }
-          $sql = "select group_name, group_number from visitors;";
+          $sql = "select group_name, group_number from visitors where group_name = '$group_name';";
           $result = mysqli_query($conn, $sql);
           ?>
     </head>
@@ -24,11 +24,6 @@
           foreach($result as $row){
             echo "{$row["group_name"]} is the number {$row["group_number"]}.<br>";
          }
-         /*if($resultcheck > 0) {
-          while($row = mysqli_fetch_assoc($result)){
-             echo "{$row['group_name']} is the number {$row['group_number']}.</br>";
-          }
-        }*/
          //close session (stop connection)
          mysqli_close($conn);
           ?>
