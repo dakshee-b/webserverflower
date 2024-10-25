@@ -19,7 +19,7 @@
           ?>
     </head>
     <body>
-          You selected group:<?= htmlspecialchars ($_POST $group_name); ?>. </br> 
+          You selected group:<?= htmlspecialchars ($group_name); ?>. </br> 
           <?php 
           foreach($result as $row){
             echo "{$row["group_name"]} is the number {$row["group_number"]}.<br>";
