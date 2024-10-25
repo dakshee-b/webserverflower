@@ -13,11 +13,11 @@
           if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
+          
+          $gr=htmlspecialchars ($_POST ['gr']);  
+          $num=htmlspecialchars ($_POST ['num']);
 
-          $gr= htmlspecialchars ($_POST ['gr']);  
-          $num= htmlspecialchars ($_POST ['num']);
-
-          echo "Group Name: htmlspecialchars ($_POST ['gr']) , Group Number: htmlspecialchars ($_POST ['num']) </br>";
+          echo "Group Name: $gr, Group Number: $num </br>";
 
           $sql = "insert into visitors (group_name, group_number) values ('$gr', '$num')";
          
