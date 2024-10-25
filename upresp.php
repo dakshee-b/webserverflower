@@ -13,9 +13,9 @@
           if (!$conn) {
             die("Connection failed: {mysqli_connect_error()}");
           }
-          $group= htmlspecialchars ($_POST ['group']);  
+          $gr= htmlspecialchars ($_POST ['gr']);  
 
-          $sql = "insert into visitors (group_name) values ('$group')";
+          $sql = "insert into visitors (group_name) values ('$gr')";
          
           $result = mysqli_query($conn, $sql);
          
