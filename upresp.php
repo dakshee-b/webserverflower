@@ -14,8 +14,8 @@
             die("Connection failed: {mysqli_connect_error()}");
           }
           
-          $gr=htmlspecialchars ($_POST ['gr']);  
-          $num=htmlspecialchars ($_POST ['num']);
+          $gr=var_dump($_POST ['gr']);  
+          $num=var_dump($_POST ['num']);
 
           echo "Group Name: $gr, Group Number: $num </br>";
 
