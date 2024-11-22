@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>L</title>
+        <script>
+           async function light(){
+            var btn = document.getElementById("bn");
+            if ( btn === "1") 
+           {btn = "changed state";}
+           else {
+            btn = "1";
+           }
+           /* var x = await fetch();
+            var toggle = await x.button(); */
+            document.getElementById("lit").innerHTML = "toggle"; 
+           } 
+        </script>
+        <p id="lit"></p>
+            <button type="button" id="bn" onclick="light()">LED toggled</button>
+    </head>
+    <body> 
+        <form action="rgpio.php" method="post">
+        </form>
+    </body>
+</html
