@@ -24,9 +24,8 @@
 
      
           
-          $temp = htmlspecialchars ($_POST['temp']);
-          $pres= htmlspecialchars ($_POST['pres']);
-          $alt = htmlspecialchars ($_POST['alt']);
+          $data = htmlspecialchars ($_POST['data']);
+        
       
           
           $raw = `./bme280`; 
@@ -38,10 +37,7 @@
          // var_dump($deserialized); 
           Temperature:
           echo $deserialized["temperature"]; 
-          Pressure:
-          echo $deserialized["pressure"];
-          Altitude:
-          echo $deserialized["altitude"];
+     
 
           if ($temp == 'temperature') {
               echo $filter["temperature"];
@@ -53,6 +49,41 @@
             echo $filter["altitude"];
         } 
 
+             ?>
+             <?=
+             
+          $data = htmlspecialchars ($_POST['data']);
+        
+      
+          
+          $raw = `./bme280`; 
+
+         // echo $raw; 
+          
+          $deserialized = json_decode($raw, true); 
+          
+         // var_dump($deserialized); 
+   
+          Pressure:
+          echo $deserialized["pressure"];
+    
+          ?>
+           <?=
+             
+             $data = htmlspecialchars ($_POST['data']);
+           
+         
+             
+             $raw = `./bme280`; 
+   
+            // echo $raw; 
+             
+             $deserialized = json_decode($raw, true); 
+             
+            // var_dump($deserialized); 
+            
+             Altitude:
+             echo $deserialized["altitude"];
              ?>
         </p>         
     </body>
