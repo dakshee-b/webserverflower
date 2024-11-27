@@ -31,13 +31,15 @@
           
           $raw = `./bme280`; 
 
-          echo $raw; 
+         // echo $raw; 
           
           $deserialized = json_decode($raw, true); 
           
-          var_dump($deserialized); 
+         // var_dump($deserialized); 
           
           echo $deserialized["temperature"]; 
+          echo $deserialized["pressure"];
+          echo $deserialized["altitude"];
 
           if ($temp == 'temperature') {
               echo $filter["temperature"];
