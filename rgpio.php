@@ -31,11 +31,9 @@
           
           $raw = `./bme280`; 
 
-          echo $raw; 
+        
 
           $filter = json_decode($raw, true); 
-
-           var_dump($filter); 
 
       
           
