@@ -2,7 +2,7 @@
 <html>
     <head> 
         <title>L</title>
-        <script>
+        <!--<script>
 
            async function light(){
             var resp = await fetch("rgpio.php");
@@ -17,10 +17,21 @@
                 <p id="temperature"> Temperature:</p>
                 <p id="pressure"> Pressure:</p>
                 <p id="altitude"> Altitude:</p>
-            </div>
+            </div> -->>
+            <script>
+                document.getElementById('onbtn').onclick = function() {
+                    this.innerHTML = "Turning ON...";
+                };
+                document.getElementById('offbtn').onclick = function() {
+                    this.innerHTML = "Turning OFF...";
+                };
+            </script>
+
     </head>
     <body> 
-        <form action="rgpio.php" method="post">
+        <form action = "rgpio.php" method="post">
+            <button type="submit" name="led_state" value="on" id="onbtn">LED ON</button>
+            <button type="submit" name="led_state" value="off" id="offbtn">LED OFF</button>
         </form>
     </body>
 </html
