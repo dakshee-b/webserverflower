@@ -36,9 +36,11 @@
           $deserialized = json_decode($raw, true); 
           
          // var_dump($deserialized); 
-          
+          Temperature:
           echo $deserialized["temperature"]; 
+          Pressure:
           echo $deserialized["pressure"];
+          Altitude:
           echo $deserialized["altitude"];
 
           if ($temp == 'temperature') {
