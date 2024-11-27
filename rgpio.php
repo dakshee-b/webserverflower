@@ -7,13 +7,20 @@
     <body>
     <p>
          <?=
-           echo htmlspecialchars ($_POST ['lit']);
-           $raw = bme280;
+           echo htmlspecialchars ($_POST ['data']);
+          /* $raw = bme280;
            $deserialized = json_decode($raw, true);
            var_dump($deserialized);
            echo $deserialized["temperature"];
            echo $deserialized["pressure"];
-           echo $deserialized["altitude"];
+           echo $deserialized["altitude"]; */
+
+           $data = array(
+            "temperature" => $temperature,
+            "pressure" => $pressure,
+            "altitude" => $altitude
+        ); 
+        echo json_decode($raw, true);
              ?>
         </p>         
     </body>
