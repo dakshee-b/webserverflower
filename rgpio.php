@@ -8,9 +8,12 @@
     <p>
          <?=
            echo htmlspecialchars ($_POST ['lit']);
-            echo $deserialized["temperature"];
-            echo $deserialized["pressure"]; 
-            echo $deserialized["altitude"];
+           $raw = bme280;
+           $deserialized = json_decode($raw, true);
+           var_dump($deserialized);
+           echo $deserialized["temperature"];
+           echo $deserialized["pressure"];
+           echo $deserialized["altitude"];
              ?>
         </p>         
     </body>
