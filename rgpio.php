@@ -7,7 +7,7 @@
     <body>
     <p>
          <?=
-           htmlspecialchars ($_POST ['data']);
+         /*  htmlspecialchars ($_POST ['data']); */
           $raw = bme280;
            $deserialized = json_decode($raw, true);
            var_dump($deserialized);
