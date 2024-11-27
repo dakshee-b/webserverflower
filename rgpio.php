@@ -29,20 +29,37 @@
           $alt = htmlspecialchars ($_POST['alt']);
       
           
-          $raw = `./bme280`; 
-
-        
-
-          $filter = json_decode($raw, true); 
-
-      
           
           if ($temp == 'temperature') {
-            echo $filter["temperature"];
+            $raw = `./bme280`; 
+
+echo $raw; 
+
+$deserialized = json_decode($raw, true); 
+
+var_dump($deserialized); 
+
+echo $deserialized["temperature"]; 
         } elseif ($pres == 'pressure') {
-            echo $filter["pressure"];
+          $raw = `./bme280`; 
+
+          echo $raw; 
+          
+          $deserialized = json_decode($raw, true); 
+          
+          var_dump($deserialized); 
+          
+          echo $deserialized["pressure"]; 
         } elseif ($alt == 'altitude') {
-            echo $filter["altitude"];
+          $raw = `./bme280`; 
+
+          echo $raw; 
+          
+          $deserialized = json_decode($raw, true); 
+          
+          var_dump($deserialized); 
+          
+          echo $deserialized["altitude"]; 
         }
 
              ?>
