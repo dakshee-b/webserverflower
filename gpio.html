@@ -5,14 +5,19 @@
         <script>
 
            async function light(){
-            var resp = await fetch("bme280");
+            var resp = await fetch("rgpio.php");
             var find = await resp.json(); 
-            document.getElementById("lit").innerHTML =  "Temperature: " + find.temperature + " °C<br>" +
-            "Pressure: " + find.pressure + " hPa<br>" +
-            "Altitude: " + find.altitude + " m"; ; 
+            document.getElementById("temperature").innerHTML =  "Temperature: " + find.temperature + " °C" ;
+            document.getElementById("pressure").innerHTML = "Pressure: " + find.pressure + " hPa" ;
+            document.getElementById("altitude").innerHTML = "Altitude: " + find.altitude + " m" ; 
            } 
         </script>
-            <button type="button" id="lit" onclick="light()">data display</button>
+            <button onclick="light()">data display</button>
+            <div id="data">           
+                <p id="temperature"> Temperature:</p>
+                <p id="pressure"> Pressure:</p>
+                <p id="altitude"> Altitude:</p>
+            </div>
     </head>
     <body> 
         <form action="rgpio.php" method="post">
