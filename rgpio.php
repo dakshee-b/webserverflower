@@ -7,8 +7,10 @@
     <body>
     <p>
          <?=
-            htmlspecialchars ($_POST ['bn']);
-            $output = `gpio toggle 3`; 
+            htmlspecialchars ($_POST ['lit']);
+            echo $deserialized["temperature"];
+            echo $deserialized["pressure"]; 
+            echo $deserialized["altitude"];
              ?>
         </p>         
     </body>
