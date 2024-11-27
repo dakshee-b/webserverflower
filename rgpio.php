@@ -38,14 +38,12 @@
       
           
           if ($temp == 'temperature') {
-              echo $filter["temperature"];
-
-          } elseif ($pres == 'pressure') {
-              echo $filter["pressure"];
-
-          } elseif ($alt == 'altitude') {
+            echo $filter["temperature"];
+        } elseif ($pres == 'pressure') {
+            echo $filter["pressure"];
+        } elseif ($alt == 'altitude') {
             echo $filter["altitude"];
-        } 
+        }
 
              ?>
         </p>         
