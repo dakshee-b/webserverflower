@@ -7,10 +7,12 @@
            async function light(){
             var resp = await fetch("bme280");
             var find = await resp.json(); 
-            document.getElementById("lit").innerHTML = "temperature", "pressure", "altitude"; 
+            document.getElementById("lit").innerHTML =  "Temperature: " + find.temperature + " °C<br>" +
+            "Pressure: " + find.pressure + " hPa<br>" +
+            "Altitude: " + find.altitude + " m"; ; 
            } 
         </script>
-            <button type="button" id="lit" onclick="light()">LED toggled</button>
+            <button type="button" id="lit" onclick="light()">data display</button>
     </head>
     <body> 
         <form action="rgpio.php" method="post">
