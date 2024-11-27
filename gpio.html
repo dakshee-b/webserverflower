@@ -19,23 +19,17 @@
                 <p id="altitude"> Altitude:</p>
             </div> -->
             <script>
-                document.getElementById('temp').onclick = function() {
-                    this.innerHTML = "Temperature";
+                document.getElementById('data').onclick = function() {
+                    this.innerHTML = "Data display";
                 };
-                document.getElementById('pres').onclick = function() {
-                    this.innerHTML = "Pressure";
-                };
-                document.getElementById('alt').onclick = function() {
-                    this.innerHTML = "Altitude";
-                };
+                
             </script>
 
     </head>
     <body> 
         <form action = "rgpio.php" method="post">
-            <button type="submit" name="temp" id="temp">Temperature</button>
-            <button type="submit" name="pres"  id="pres">Pressure</button>
-            <button type="submit" name="alt" id="alt">Altitude</button>
+            <button type="submit" name="data" id="data">Data display</button>
+            
         </form>
     </body>
 </html
