@@ -22,9 +22,9 @@
         ); 
         echo json_decode($raw, true); */
 
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+     
           // Get the LED state from the form (either 'on' or 'off')
-          $led_state = $_POST['led_state'];
+          $led_state = htmlspecialchars ($_POST['led_state']);
       
           // GPIO pin where the LED is connected (Example: GPIO pin 17)
           $gpio_pin = 3;
@@ -41,10 +41,8 @@
               // Turn the LED off (set the GPIO pin low)
               shell_exec("gpio write $gpio_pin 0");
               echo "<p>LED is OFF</p>";
-          } else {
-              echo "<p>Invalid LED state.</p>";
-          }
-      }
+          } 
+
              ?>
         </p>         
     </body>
