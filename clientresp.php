@@ -30,7 +30,7 @@
                <?php
                     foreach($result as $row){
                         echo"<option value='{$row['search_term']}'> {$row['IP_address']}</option></br>"; } 
-                        header('Location: https://www.g00gie.ca/');
+                        header('Location: https://www.google.com/search?q=13&rlz=1C1GCEB_enCA1111CA1141&oq=13&gs_lcrp=EgZjaHJvbWUyDAgAEEUYORixAxiABDIPCAEQABhDGLEDGIAEGIoFMhIIAhAAGEMYgwEYsQMYgAQYigUyDwgDEC4YQxiABBjlBBiKBTIMCAQQABhDGIAEGIoFMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMhAICBAAGIMBGLEDGIAEGIoFMgoICRAuGLEDGIAE0gEHNjg3ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8/');
                         //close session (stop connection)
                      mysqli_close($conn);
                      ?>    
